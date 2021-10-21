@@ -138,8 +138,8 @@ const VideoPreviewPage = (props) => {
             window.location.reload();
         }
 
-        axios.post("http://localhost:5000/save", dataForm, {
-            // axios.post("https://videorecorder-12.herokuapp.com/save", dataForm, {
+        // axios.post("http://localhost:5000/save", dataForm, {
+        axios.post("https://videorecorder-12.herokuapp.com/save", dataForm, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },

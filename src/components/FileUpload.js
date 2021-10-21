@@ -27,8 +27,8 @@ const FileUpload = () => {
             window.location.reload();
         }
         try {
-            const res = await axios.post('http://localhost:5000/upload', formData, {
-                // const res = await axios.post('https://videorecorder-12.herokuapp.com/upload', formData, {
+            // const res = await axios.post('http://localhost:5000/upload', formData, {
+            const res = await axios.post('https://videorecorder-12.herokuapp.com/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
