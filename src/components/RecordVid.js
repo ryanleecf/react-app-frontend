@@ -137,6 +137,7 @@ const VideoPreviewPage = (props) => {
             window.alert('Cannot find File')
             window.location.reload();
         }
+        console.log(videoBlob);
 
         // axios.post("http://localhost:5000/save", dataForm, {
         axios.post("https://videorecorder-12.herokuapp.com/save", dataForm, {
@@ -153,6 +154,7 @@ const VideoPreviewPage = (props) => {
         }).then((data) => {
             console.log('Yay');
             window.alert(data.request.responseText);
+            console.log(data.request.responseText);
             // window.alert('Your file has been uploaded:\n\n' + 'Name: ' + data.data.FileNameNew + '\nPath: ' + data.data.filePath);
             // window.alert('File has been uploaded');
         });
@@ -180,7 +182,7 @@ const VideoPreviewPage = (props) => {
                         <button onClick={handleSubmit} className="btn btn-info btn-block mt-4 mb-2" style={{ width: "100%" }} id="upload-video">Upload Recorded Video</button>
                         <Progress percentage={uploadPercentage} />
                         {uploadPercentage === 100 ? <div className='row mt-5'>
-                            <button className="btn btn-outline-info" type="button">Continue</button>
+                            <button className="btn btn-outline-info" type="button" onClick={() => { window.location.href = "https://react-heroku-frontend.herokuapp.com/" }}>Continue</button>
                         </div> : null}
                     </div>
                 </div>

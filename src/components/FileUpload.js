@@ -68,7 +68,7 @@ const FileUpload = () => {
                 <input type="submit" value="Upload" className="btn btn-outline-info btn-block mt-4" style={{ width: '100%' }} />
             </form>
             {uploadPercentage === 100 ? <div className='row mt-5'>
-                <button className="btn btn-info" type="button">Continue</button>
+                <button className="btn btn-info" type="button" onClick={() => { window.location.href = "https://react-heroku-frontend.herokuapp.com/" }}>Continue</button>
             </div> : null}
 
             {/* //Conditional */}
