@@ -15,7 +15,7 @@ const RecordVid = ({ push }) => {
     return (
         <div className="container mt-4">
             {isIOS ?
-                <div className="container center" style={{ width: '100%', height: '540px' }}>
+                <div className="container center" style={{ width: '70%', height: '400px' }}>
                     <VideoRecorder
                         // chunkSize={250}
                         constraints={{
@@ -59,7 +59,7 @@ const RecordVid = ({ push }) => {
                     />
                 </div>
                 :
-                <div className="container center" style={{ width: '100%', height: '540px' }}>
+                <div className="container center" style={{ width: '70%', height: '400px' }}>
                     <VideoRecorder
                         // chunkSize={250}
                         constraints={{
@@ -172,14 +172,14 @@ const VideoPreviewPage = (props) => {
                         <video
                             src={videoURL}
                             width={'100%'}
-                            height={'470px'}
+                            height={'400px'}
                             // autoPlay
                             // loop
                             controls
                         />
                     </div>
                     <div className="mt-4">
-                        <button onClick={handleSubmit} className="btn btn-info btn-block mt-4 mb-2" style={{ width: "100%" }} id="upload-video">Upload Recorded Video</button>
+                        <button onClick={handleSubmit} className="btn btn-outline-info btn-block mt-4 mb-2" style={{ width: "100%" }} id="upload-video">Upload Recorded Video</button>
                         <Progress percentage={uploadPercentage} />
                         {uploadPercentage === 100 ? <div className='row mt-5'>
                             <button className="btn btn-outline-info" type="button" onClick={() => { window.location.href = "https://react-heroku-frontend.herokuapp.com/" }}>Continue</button>

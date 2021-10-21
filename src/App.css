@@ -1,3 +1,7 @@
+html {
+  background-color: #F8F9FA;
+}
+
 .loader {
   transform: scale(1);
   animation: pulse 2s infinite;
@@ -15,5 +19,14 @@
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
