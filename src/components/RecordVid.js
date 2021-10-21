@@ -150,9 +150,11 @@ const VideoPreviewPage = (props) => {
                 //     setUploadPercentage(0)
                 // }, 5000);
             }
-        }).then(() => {
+        }).then((data) => {
             console.log('Yay');
-            window.alert("File has been uploaded");
+            window.alert(data.request.responseText);
+            // window.alert('Your file has been uploaded:\n\n' + 'Name: ' + data.data.FileNameNew + '\nPath: ' + data.data.filePath);
+            // window.alert('File has been uploaded');
         });
     };
 
